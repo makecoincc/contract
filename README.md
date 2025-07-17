@@ -17,5 +17,5 @@ You can deploy it using
 ```shell
 npx hardhat ignition deploy ./ignition/modules/Lock.js
 
-npx hardhat ignition deploy ./ignition/modules/Lock.js --network localhost
+npx hardhat ignition deploy ./ignition/modules/Lock.js --network sepolia
 ```

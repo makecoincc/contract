@@ -3,7 +3,7 @@ require("dotenv").config();
 
 const infuraKey = process.env.infuraKey;
 const privateKey1 = process.env.privateKey1;
-const privateKey2 = process.env.privateKey2;
+const alchemyKey = process.env.alchemyKey;
 
 module.exports = {
   defaultNetwork: "sepolia",
@@ -12,8 +12,14 @@ module.exports = {
     },
     sepolia: {
       url: `https://sepolia.infura.io/v3/${infuraKey}`,
-      accounts: [privateKey1, privateKey2]
-    }
+      accounts: [privateKey1],
+      chainId: 11155111,
+    },
+     baseSepolia: {
+      url: `https://base-sepolia.g.alchemy.com/v2/${alchemyKey}`,
+      accounts: [privateKey1],
+      chainId: 84532,
+    },
   },
   solidity: {
     version: "0.8.28",
